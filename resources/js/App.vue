@@ -1,7 +1,9 @@
 <template>
 
     <div>
-        <h1>ciao</h1>
+        <Header/>
+        <Main/>
+        <Footer/>
     </div>
     
 </template>
