@@ -12,7 +12,20 @@
 
         
     </div>
+
+    @auth
+        <script>
+            window.autenticato = true;
+        </script>
+    @endauth
+
+    @guest
+        <script>
+            window.autenticato = false;
+        </script>
+    @endguest
     
     <script src="{{asset("js/front.js")}}"></script>
+    
 </body>
 </html>

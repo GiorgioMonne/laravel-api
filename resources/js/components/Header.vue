@@ -1,16 +1,23 @@
 <template>
     <header>
         <h2>Sono l'header</h2>
-        <ul>
+        <ul v-if="!autenticato" >
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Registrazione</a></li>
         </ul>
+        <a v-else href="#">Dashboard</a>
     </header>
 </template>
 
 <script>
 export default{
-    name: "Header"
+    name: "Header",
+    computed: {
+        eAutenticato: function(){
+            return window.autenticato;
+        }
+
+    }
 }
 </script>
 

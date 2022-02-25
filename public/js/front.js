@@ -1975,8 +1975,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Header"
+  name: "Header",
+  computed: {
+    eAutenticato: function eAutenticato() {
+      return window.autenticato;
+    }
+  }
 });
 
 /***/ }),
@@ -2562,23 +2568,27 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("header", [
+    _c("h2", [_vm._v("Sono l'header")]),
+    _vm._v(" "),
+    !_vm.autenticato
+      ? _c("ul", [_vm._m(0), _vm._v(" "), _vm._m(1)])
+      : _c("a", { attrs: { href: "#" } }, [_vm._v("Dashboard")]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("header", [
-      _c("h2", [_vm._v("Sono l'header")]),
-      _vm._v(" "),
-      _c("ul", [
-        _c("li", [_c("a", { attrs: { href: "/login" } }, [_vm._v("Login")])]),
-        _vm._v(" "),
-        _c("li", [
-          _c("a", { attrs: { href: "/register" } }, [_vm._v("Registrazione")]),
-        ]),
-      ]),
+    return _c("li", [_c("a", { attrs: { href: "/login" } }, [_vm._v("Login")])])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("a", { attrs: { href: "/register" } }, [_vm._v("Registrazione")]),
     ])
   },
 ]
