@@ -5,7 +5,7 @@
             <li><a href="/login">Login</a></li>
             <li><a href="/register">Registrazione</a></li>
         </ul>
-        <a v-else href="#">Dashboard</a>
+        <a v-else href="admin/home">Dashboard</a>
     </header>
 </template>
 

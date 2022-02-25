@@ -2573,7 +2573,7 @@ var render = function () {
     _vm._v(" "),
     !_vm.autenticato
       ? _c("ul", [_vm._m(0), _vm._v(" "), _vm._m(1)])
-      : _c("a", { attrs: { href: "#" } }, [_vm._v("Dashboard")]),
+      : _c("a", { attrs: { href: "admin/home" } }, [_vm._v("Dashboard")]),
   ])
 }
 var staticRenderFns = [

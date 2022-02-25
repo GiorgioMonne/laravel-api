@@ -12,7 +12,7 @@
 
                 <div class="card-body">
 
-                    <a href="{{route("posts.create")}}"><button type="button" class="btn btn-success">Crea Post</button></a>
+                    <a href="{{route("categories.create")}}"><button type="button" class="btn btn-success">Crea Post</button></a>
 
                     <table class="table">
                         <thead>
@@ -26,27 +26,27 @@
                         </thead>
                         <tbody> 
                             
-                            @foreach ($posts as $post)
+                            @foreach ($categories as $category)
                                 <tr>
-                                    <td>{{$post->id}}</td>
-                                    <td>{{$post->title}}</td>
-                                    <td>{{$post->slug}}</td>
+                                    <td>{{$category->id}}</td>
+                                    <td>{{$category->title}}</td>
+                                    <td>{{$category->slug}}</td>
                                     <td>
-                                        @if($post->published)
+                                        @if($category->published)
                                             <span  class="badge badge-success">Pubblicato</span>
                                         @else
                                             <span class="badge badge-secondary">Trade</span>
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{route("posts.show", $post->id)}}"><button type="button" class="btn btn-info">Visualizza</button></a>
+                                        <a href="{{route("categories.show", $category->id)}}"><button type="button" class="btn btn-info">Visualizza</button></a>
                                     </td>
                                     <td>
-                                        <a href="{{route("posts.edit", $post->id)}}"><button type="button" class="btn btn-warning">Modifica</button></a>
+                                        <a href="{{route("categories.edit", $category->id)}}"><button type="button" class="btn btn-warning">Modifica</button></a>
                                     </td>
 
                                     <td>
-                                        <form action="{{route("posts.destroy", $post->id)}}" method="POST">
+                                        <form action="{{route("categories.destroy", $category->id)}}" method="POST">
                                         @csrf
                                         @method("DELETE")
                                         <button type="submit" class="btn btn-danger">Elimina</button>
