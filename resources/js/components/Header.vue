@@ -1,6 +1,10 @@
 <template>
     <header>
         <h2>Sono l'header</h2>
+        <ul>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Registrazione</a></li>
+        </ul>
     </header>
 </template>
 
